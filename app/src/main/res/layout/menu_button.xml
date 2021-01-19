@@ -40,10 +40,10 @@
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageRight"
@@ -56,14 +56,16 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_black"
                 android:text="TextView"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:textAllCaps="true"
+                android:textSize="@dimen/head_text_size" />
 
             <TextView
                 android:id="@+id/infotextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="@dimen/info_text_size" />
 
         </LinearLayout>
 
@@ -71,13 +73,12 @@
             android:id="@+id/Badgeleft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
             android:background="@drawable/badge_background"
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:text="0"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/imageLeft"
             app:layout_constraintStart_toEndOf="@+id/imageLeft"
@@ -87,13 +88,12 @@
             android:id="@+id/Badgeright"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
             android:background="@drawable/badge_background"
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:text="0"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/imageRight"
             app:layout_constraintEnd_toStartOf="@+id/imageRight"

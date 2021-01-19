@@ -10,6 +10,6 @@
         app:isLeft="false"
         app:text1="test"
         app:text2="proba 12 \n asd  "
-        app:badge="1"/>
+        app:badge="3"/>
 
 </FrameLayout>

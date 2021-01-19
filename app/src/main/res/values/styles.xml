@@ -1,4 +1,8 @@
 <resources>
 
-
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+        <item name="backgroundColor">@color/white</item>
+    </style>
 </resources>

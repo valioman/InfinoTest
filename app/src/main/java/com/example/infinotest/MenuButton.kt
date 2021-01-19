@@ -12,20 +12,41 @@ import androidx.constraintlayout.widget.ConstraintLayout
 
 class MenuButton(context: Context, attrs: AttributeSet?) :
     LinearLayout(context, attrs) {
+    private var leftBadge:TextView?=null
+    private var rightBadge:TextView?=null
+    var isLeft:Boolean=true
 
    init {
        init(attrs)
    }
 
-//    fun isShowText(): Boolean {
-//        return mShowText
-//    }
-//
-//    fun setShowText(showText: Boolean) {
-//        mShowText = showText
-//        invalidate()
-//        requestLayout()
-//    }
+
+    var badgeText:String?=null
+    set(value){
+        field=value
+        if(!value.isNullOrEmpty() && !value.contentEquals("0")){
+           if(isLeft)
+           {
+               rightBadge?.text=value
+               leftBadge?.visibility=View.GONE
+               rightBadge?.visibility=View.VISIBLE
+               println("left $value")
+           }
+            else
+           {
+               leftBadge?.text=value
+               leftBadge?.visibility=View.VISIBLE
+               rightBadge?.visibility=View.GONE
+               println("right $value")
+           }
+        }else
+        {
+         leftBadge?.visibility=View.GONE
+         rightBadge?.visibility=View.GONE
+        }
+        invalidate()
+        requestLayout()
+    }
 
 
     private fun init(attrs: AttributeSet?) {
@@ -36,34 +57,32 @@ class MenuButton(context: Context, attrs: AttributeSet?) :
         val rightImage=findViewById<ImageView>(R.id.imageRight)
         val headText=findViewById<TextView>(R.id.headtextView)
         val infoText = findViewById<TextView>(R.id.infotextView)
-        val leftBadge = findViewById<TextView>(R.id.Badgeleft)
-        val rightBadge = findViewById<TextView>(R.id.Badgeright)
+        leftBadge = findViewById<TextView>(R.id.Badgeleft)
+        rightBadge = findViewById<TextView>(R.id.Badgeright)
+        leftBadge?.visibility=View.GONE
+        rightBadge?.visibility=View.GONE
         // Load attributes
         val a = context.obtainStyledAttributes(attrs, R.styleable.MenuButton)
         try{
+            isLeft= a.getBoolean(R.styleable.MenuButton_isLeft,true)
             headText.text=a.getString(R.styleable.MenuButton_text1)
             infoText.text=a.getString(R.styleable.MenuButton_text2)
-            val badgeTxt = a.getString(R.styleable.MenuButton_badge)
-            val isleft = a.getBoolean(R.styleable.MenuButton_isLeft,true)
+            if(infoText.text.isEmpty())infoText.visibility=View.GONE
+            badgeText = a.getString(R.styleable.MenuButton_badge)
             val imageId=a.getResourceId(R.styleable.MenuButton_image,0)
 
-            if(isleft)
+            if(isLeft)
             {
 
                 lay.setBackgroundResource(R.drawable.button_left_background)
 
                 leftImage.visibility=View.GONE
-                leftBadge.visibility=View.GONE
+                leftBadge?.visibility=View.GONE
 
                 if(imageId!=0){
                     rightImage.setImageResource(imageId)
                 }
-                if(badgeTxt!=null && badgeTxt.isNotEmpty() && !badgeTxt.contentEquals("0")){
-                    rightBadge.text=badgeTxt
-                }else
-                {
-                    rightBadge.visibility=View.GONE
-                }
+
             }else
             {
                 lay.setBackgroundResource(R.drawable.button_right_background)
@@ -72,20 +91,17 @@ class MenuButton(context: Context, attrs: AttributeSet?) :
                 infoText.gravity=Gravity.RIGHT
 
                 rightImage.visibility=View.GONE
-                rightBadge.visibility=View.GONE
+                rightBadge?.visibility=View.GONE
                 if(imageId!=0){
                     leftImage.setImageResource(imageId)
                 }
-                if(badgeTxt!=null && badgeTxt.isNotEmpty() && !badgeTxt.contentEquals("0")){
-                    leftBadge.text=badgeTxt
-                }else{
-                    leftBadge.visibility=View.GONE
-                }
+
             }
         }finally {
             a.recycle()
         }
 
     }
+
 
 }

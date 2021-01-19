@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">InfinoTest</string>
+    <string name="head_b_fill">ПОПЪЛНИ</string>
+    <string name="info_b_fill">искане за кредит (ППЗ)</string>
+    <string name="head_b_check">ПРОВЕРИ</string>
+    <string name="info_b_check">статуса на кредитите си</string>
+    <string name="head_b_pay">ИЗПЛАТИ</string>
+    <string name="info_b_pay">кредит</string>
+    <string name="head_b_in">вноска</string>
+    <string name="info_b_in">събр. вноски /сторнирай/</string>
+    <string name="head_b_rep">СПРАВКИ</string>
+    <string name="info_b_rep">събери повече вноски</string>
+    <string name="head_b_res">Резултати</string>
+    <string name="info_b_res">виж твоите показатели</string>
+    <string name="head_b_info">правилник</string>
+    <string name="info_b_info">знай повече</string>
+    <string name="head_b_msg">Съобщения</string>
+    <string name="info_b_msg"></string>
+    <string name="head_b_order">Заявки</string>
+    <string name="info_b_order"></string>
+    <string name="head_b_profile">Профил</string>
+    <string name="info_b_profile"></string>
 </resources>
