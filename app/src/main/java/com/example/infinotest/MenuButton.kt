@@ -30,14 +30,12 @@ class MenuButton(context: Context, attrs: AttributeSet?) :
                rightBadge?.text=value
                leftBadge?.visibility=View.GONE
                rightBadge?.visibility=View.VISIBLE
-               println("left $value")
            }
             else
            {
                leftBadge?.text=value
                leftBadge?.visibility=View.VISIBLE
                rightBadge?.visibility=View.GONE
-               println("right $value")
            }
         }else
         {
