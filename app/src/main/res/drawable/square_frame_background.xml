@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <!--        black shadow-->
+            <item  android:top="20dp" android:left="16dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#05000000"/>
+                    <corners android:bottomLeftRadius="@dimen/button_corner_radius"
+                             android:topLeftRadius="@dimen/button_corner_radius"
+                             android:topRightRadius="90dp" android:bottomRightRadius="90dp"/>
+                </shape>
+            </item>
+            <item  android:top="20dp" android:left="16dp" android:bottom="2dp" android:right="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#05000000"/>
+                    <corners android:bottomLeftRadius="@dimen/button_corner_radius"
+                        android:topLeftRadius="@dimen/button_corner_radius"
+                        android:topRightRadius="80dp" android:bottomRightRadius="80dp"/>
+                </shape>
+            </item>
+            <item  android:top="20dp" android:left="16dp" android:bottom="4dp" android:right="4dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#05000000"/>
+                    <corners android:bottomLeftRadius="@dimen/button_corner_radius"
+                        android:topLeftRadius="@dimen/button_corner_radius"
+                        android:topRightRadius="65dp" android:bottomRightRadius="65dp"/>
+                </shape>
+            </item>
+            <item  android:top="20dp" android:left="16dp" android:bottom="8dp" android:right="8dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#05000000"/>
+                    <corners android:bottomLeftRadius="@dimen/button_corner_radius"
+                        android:topLeftRadius="@dimen/button_corner_radius"
+                        android:topRightRadius="@dimen/button_corner_radius" android:bottomRightRadius="@dimen/button_corner_radius"/>
+                </shape>
+            </item>
+            <!--        white shadow-->
+            <item  android:bottom="22dp"  android:right="20dp" >
+                <shape android:shape="rectangle">
+                    <solid android:color="#02ffffff"/>
+                    <corners android:bottomRightRadius="@dimen/button_corner_radius"
+                        android:topRightRadius="@dimen/button_corner_radius"
+                        android:topLeftRadius="90dp" android:bottomLeftRadius="90dp"/>
+                </shape>
+            </item>
+            <item  android:bottom="22dp" android:right="20dp" android:top="2dp" android:left="2dp"  >
+                <shape android:shape="rectangle">
+                    <solid android:color="#05ffffff"/>
+                    <corners android:bottomRightRadius="@dimen/button_corner_radius"
+                        android:topRightRadius="@dimen/button_corner_radius"
+                        android:topLeftRadius="80dp" android:bottomLeftRadius="80dp"/>
+                </shape>
+            </item>
+            <item  android:bottom="22dp" android:right="20dp" android:left="4dp"  android:top="4dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#10ffffff"/>
+                    <corners android:bottomRightRadius="@dimen/button_corner_radius"
+                        android:topRightRadius="@dimen/button_corner_radius"
+                        android:topLeftRadius="70dp" android:bottomLeftRadius="70dp"/>
+                </shape>
+            </item>
+            <item  android:bottom="22dp" android:right="20dp" android:left="8dp" android:top="8dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#10ffffff"/>
+                    <corners android:bottomRightRadius="@dimen/button_corner_radius"
+                        android:topRightRadius="@dimen/button_corner_radius"
+                        android:topLeftRadius="60dp" android:bottomLeftRadius="60dp"/>
+                </shape>
+            </item>
+
+<!--             background-->
+            <item android:top="14dp" android:left="14dp" android:right="12dp" android:bottom="12dp">
+                <shape android:shape="rectangle">
+                    <gradient android:startColor="#FFFFFF"
+                        android:centerColor="#F5F6F6"
+                        android:endColor="#A0A3A5"
+                        android:angle="270"/>
+                    <corners android:radius="@dimen/button_corner_radius"/>
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+</selector>

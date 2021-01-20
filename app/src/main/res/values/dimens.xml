@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="match_parent" format="integer" type="dimen">-1</item>
+    <item name="wrap_content" format="integer" type="dimen">-2</item>
     <dimen name="button_corner_radius">48dp</dimen>
     <dimen name="button_width">250dp</dimen>
     <dimen name="button_height">95dp</dimen>
     <dimen name="head_text_size">14sp</dimen>
     <dimen name="info_text_size">10sp</dimen>
+    <dimen name="badge_text_size">12sp</dimen>
+    <dimen name="menu_button_icon_width">@dimen/wrap_content</dimen>
+
 </resources>

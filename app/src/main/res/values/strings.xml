@@ -20,4 +20,7 @@
     <string name="info_b_order"></string>
     <string name="head_b_profile">Профил</string>
     <string name="info_b_profile"></string>
+    <string name="button_enter">ВХОД</string>
+    <string name="forgot_pass"><u>Забравена парола</u></string>
+    <string name="password">Парола</string>
 </resources>
