@@ -3,6 +3,7 @@
     <item name="match_parent" format="integer" type="dimen">-1</item>
     <item name="wrap_content" format="integer" type="dimen">-2</item>
     <dimen name="button_corner_radius">48dp</dimen>
+    <dimen name="list_row_corner_radius">8dp</dimen>
     <dimen name="button_width">250dp</dimen>
     <dimen name="button_height">95dp</dimen>
     <dimen name="head_text_size">13sp</dimen>

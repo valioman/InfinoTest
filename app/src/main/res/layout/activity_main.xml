@@ -4,45 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@drawable/main_background"
-    >
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:src="@drawable/ic_logosmall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_logosmall" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/imageView2"
+    <ImageView
+        android:id="@+id/avatarImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_gravity="center"
-        app:cardCornerRadius="150dp"
         android:layout_marginTop="8dp"
-        app:cardElevation="15dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/woman"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
-        <ImageView
-            android:id="@+id/resultImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/woman"
-            android:scaleType="centerCrop"
-            android:layout_gravity="center"/>
-
-
-
-    </androidx.cardview.widget.CardView>
-
-
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/nameView"
@@ -54,7 +39,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/avatarImage" />
 
     <TextView
         android:id="@+id/numberView"
@@ -79,146 +64,193 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numberView" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/infoView">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <com.example.infinotest.MenuButton
-                android:id="@+id/mbFill"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:image="@drawable/ic_path_7658"
-                app:isLeft="true"
-                app:text1="@string/head_b_fill"
-                app:text2="@string/info_b_fill" />
-
-            <com.example.infinotest.MenuButton
-                android:id="@+id/checkButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:badge="1"
-                app:image="@drawable/ic_path_6575"
-                app:isLeft="false"
-                app:text1="@string/head_b_check"
-                app:text2="@string/info_b_check" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <com.example.infinotest.MenuButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:image="@drawable/ic_path_7663"
-                app:isLeft="true"
-                app:text1="@string/head_b_pay"
-                app:text2="@string/info_b_pay" />
-
-            <com.example.infinotest.MenuButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:image="@drawable/ic_path_6787"
-                app:isLeft="false"
-                app:text1="@string/head_b_in"
-                app:text2="@string/info_b_in" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <com.example.infinotest.MenuButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:image="@drawable/ic_path_6584"
-                app:isLeft="true"
-                app:text1="@string/head_b_rep"
-                app:text2="@string/info_b_rep" />
-
-            <com.example.infinotest.MenuButton
-                android:id="@+id/resultButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:image="@drawable/ic_path_9216"
-                app:isLeft="false"
-                app:text1="@string/head_b_res"
-                app:text2="@string/info_b_res" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <com.example.infinotest.MenuButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:image="@drawable/ic_path_9215"
-                app:isLeft="true"
-                app:text1="@string/head_b_info"
-                app:text2="@string/info_b_info" />
-
-            <com.example.infinotest.MenuButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:image="@drawable/ic_path_9213"
-                app:isLeft="false"
-                app:text1="@string/head_b_msg"
-                app:text2="@string/head_b_msg" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <com.example.infinotest.MenuButton
-                android:id="@+id/ordersButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:image="@drawable/ic_path_6535"
-                app:isLeft="true"
-                app:text1="@string/head_b_order"
-                app:text2="@string/info_b_order" />
-
-            <com.example.infinotest.MenuButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:image="@drawable/ic_path_6394"
-                app:isLeft="false"
-                app:text1="@string/head_b_profile"
-                app:text2="@string/info_b_profile" />
-        </LinearLayout>
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/infoView" />
 
 
+    <com.example.infinotest.components.LeftMenuButton
+        android:id="@+id/mbFill"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:tag="menubutton"
+        app:descriptionText="@string/info_b_fill"
+        app:imageRes="@drawable/ic_path_7658"
+        app:layout_constraintBottom_toTopOf="@+id/mbPay"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoView"
+        app:text="@string/head_b_fill">
+
+    </com.example.infinotest.components.LeftMenuButton>
+
+    <com.example.infinotest.components.LeftMenuButton
+        android:id="@+id/mbPay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:tag="menubutton"
+        app:descriptionText="@string/info_b_pay"
+        app:imageRes="@drawable/ic_path_7663"
+        app:layout_constraintBottom_toTopOf="@+id/mbReports"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mbFill"
+        app:text="@string/head_b_pay">
+
+    </com.example.infinotest.components.LeftMenuButton>
+
+    <com.example.infinotest.components.LeftMenuButton
+        android:id="@+id/mbReports"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:tag="menubutton"
+        app:descriptionText="@string/info_b_rep"
+        app:imageRes="@drawable/ic_path_6584"
+        app:layout_constraintBottom_toTopOf="@+id/mbInfo"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mbPay"
+        app:text="@string/head_b_rep">
+
+    </com.example.infinotest.components.LeftMenuButton>
+
+    <com.example.infinotest.components.LeftMenuButton
+        android:id="@+id/mbInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:tag="menubutton"
+        app:descriptionText="@string/info_b_info"
+        app:imageRes="@drawable/ic_path_9215"
+        app:layout_constraintBottom_toTopOf="@+id/mbOrders"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mbReports"
+        app:text="@string/head_b_info">
+
+    </com.example.infinotest.components.LeftMenuButton>
+
+    <com.example.infinotest.components.LeftMenuButton
+        android:id="@+id/mbOrders"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:tag="menubutton"
+        app:descriptionText="@string/info_b_order"
+        app:imageRes="@drawable/ic_path_6535"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mbInfo"
+        app:text="@string/head_b_order">
+
+    </com.example.infinotest.components.LeftMenuButton>
+
+    <com.example.infinotest.components.RightMenuButton
+        android:id="@+id/mbCheck"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:tag="menubutton"
+        app:descriptionText="@string/info_b_check"
+        app:imageRes="@drawable/ic_path_6575"
+        app:layout_constraintBottom_toTopOf="@+id/mbContrib"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/infoView"
+        app:text="@string/head_b_check" />
+
+    <com.example.infinotest.components.RightMenuButton
+        android:id="@+id/mbContrib"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:tag="menubutton"
+        app:descriptionText="@string/info_b_in"
+        app:imageRes="@drawable/ic_path_6787"
+        app:layout_constraintBottom_toTopOf="@+id/mbResults"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/mbCheck"
+        app:text="@string/head_b_in" />
+
+    <com.example.infinotest.components.RightMenuButton
+        android:id="@+id/mbResults"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:tag="menubutton"
+        app:descriptionText="@string/info_b_res"
+        app:imageRes="@drawable/ic_path_9216"
+        app:layout_constraintBottom_toTopOf="@+id/mbMessages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/mbContrib"
+        app:text="@string/head_b_res" />
+
+    <com.example.infinotest.components.RightMenuButton
+        android:id="@+id/mbMessages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:tag="menubutton"
+        app:descriptionText="@string/info_b_msg"
+        app:imageRes="@drawable/ic_path_9213"
+        app:layout_constraintBottom_toTopOf="@+id/mbProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/mbResults"
+        app:text="@string/head_b_msg" />
+
+    <com.example.infinotest.components.RightMenuButton
+        android:id="@+id/mbProfile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:tag="menubutton"
+        app:descriptionText="@string/info_b_profile"
+        app:imageRes="@drawable/ic_path_6394"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/mbMessages"
+        app:text="@string/head_b_profile" />
 </androidx.constraintlayout.widget.ConstraintLayout>

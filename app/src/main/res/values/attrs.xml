@@ -6,4 +6,10 @@
         <attr name="badge" format="string" />
         <attr name="image" format="color|reference" />
     </declare-styleable>
+    <declare-styleable name="MenuButtonBase">
+        <attr name="text" format="string" />
+        <attr name="descriptionText" format="string" />
+        <attr name="badgeText" format="string" />
+        <attr name="imageRes" format="color|reference" />
+    </declare-styleable>
 </resources>

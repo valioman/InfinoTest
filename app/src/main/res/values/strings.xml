@@ -23,4 +23,7 @@
     <string name="button_enter">ВХОД</string>
     <string name="forgot_pass"><u>Забравена парола</u></string>
     <string name="password">Парола</string>
+    <string name="open">Отвори</string>
+    <string name="sum">Сума :</string>
+    <string name="show">Преглед</string>
 </resources>
