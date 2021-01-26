@@ -23,6 +23,7 @@ class FillAdapter(
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val avatar :ImageView = view.findViewById(R.id.avatarBox)
+        val avatarText:TextView=view.findViewById(R.id.avatarTextView)
         val names:TextView = view.findViewById(R.id.namesBox)
         val postinfo:TextView = view.findViewById(R.id.postinfoBox)
         val statename:TextView = view.findViewById(R.id.statenameBox)
@@ -71,11 +72,14 @@ class FillAdapter(
 
         if(data.person.avatarResId!=null)
         {
+            v.avatar.visibility=View.VISIBLE
+            v.avatarText.visibility=View.INVISIBLE
             Picasso.get().load(data.person.avatarResId).transform(CircleTransformer()).into(v.avatar)
         }else
         {
-          val bitmap = Helper.textAsBitmap("${data.person.name[0]}${data.person.familyName[0]}",22f, Color.WHITE, Color.GRAY)
-          v.avatar.setImageBitmap(Helper.getRoundedCornerBitmap(bitmap, 360))
+            v.avatar.visibility=View.INVISIBLE
+            v.avatarText.visibility=View.VISIBLE
+            v.avatarText.text="${data.person.name[0]}${data.person.familyName[0]}"
         }
     }
 

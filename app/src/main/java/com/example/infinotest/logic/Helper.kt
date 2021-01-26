@@ -25,23 +25,5 @@ class Helper {
             return output
         }
 
-        fun textAsBitmap(text: String, textSize: Float, textColor: Int, backColor: Int): Bitmap {
-
-            val paint = Paint(Paint.ANTI_ALIAS_FLAG)
-            paint.textSize = textSize
-            paint.color = textColor
-            paint.textAlign = Paint.Align.LEFT
-            val baseline = -paint.ascent()
-            var width = (paint.measureText(text) + 0.0f).toInt()
-            var height = (baseline + paint.descent() + 0.0f).toInt()
-            val trueWidth = width
-            val framewidth=12
-            if (width > height) height = width else width = height
-            val image = Bitmap.createBitmap(width+framewidth, height+framewidth, Bitmap.Config.ARGB_8888)
-            val canvas = Canvas(image)
-            canvas.drawColor(backColor)
-            canvas.drawText(text, (width / 2 - trueWidth / 2).toFloat()+framewidth/2, baseline+framewidth.toFloat()/1.5f, paint)
-            return image
-        }
     }
 }

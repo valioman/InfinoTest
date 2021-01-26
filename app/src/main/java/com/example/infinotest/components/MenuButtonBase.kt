@@ -11,12 +11,29 @@ import com.example.infinotest.R
 
 
 abstract class MenuButtonBase(context: Context, attrs: AttributeSet?):LinearLayout(context,attrs) {
-    abstract var imageRes:Int
-    abstract var badge:String
-    abstract var text:String
-    abstract var descriptionText:String
-    abstract var mbClickListener:View.OnClickListener?
     abstract val layout:Int
+     var imageRes:Int = 0
+         set(value) {
+             field=value
+             setvalues()
+         }
+     var badge:String=""
+         set(value) {
+             field=value
+             setvalues()
+         }
+     var text:String=""
+         set(value) {
+             field=value
+             setvalues()
+         }
+     var descriptionText:String=""
+         set(value) {
+             field=value
+             setvalues()
+         }
+     var mbClickListener:View.OnClickListener?=null
+
     private val textView:TextView
     private val descrView:TextView
     private val badgeView:TextView
@@ -28,7 +45,16 @@ abstract class MenuButtonBase(context: Context, attrs: AttributeSet?):LinearLayo
        badgeView= v.findViewById(R.id.badgeBox)
        imageView= v.findViewById(R.id.imageBox)
        badgeView.visibility= View.GONE
-
+       // Load attributes from xml layout
+       val a = context.obtainStyledAttributes(attrs, R.styleable.MenuButtonBase)
+       try{
+           text = a.getString(R.styleable.MenuButtonBase_text).toString()
+           descriptionText = a.getString(R.styleable.MenuButtonBase_descriptionText).toString()
+           badge = a.getString(R.styleable.MenuButtonBase_badgeText).toString()
+           imageRes=a.getResourceId(R.styleable.MenuButtonBase_imageRes,0)
+       }finally {
+           a.recycle()
+       }
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {

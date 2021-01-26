@@ -10,5 +10,6 @@
     <dimen name="info_text_size">10sp</dimen>
     <dimen name="badge_text_size">12sp</dimen>
     <dimen name="menu_button_icon_width">@dimen/wrap_content</dimen>
-
+    <dimen name="circle_text_view_text_size">24dp</dimen>
+    <dimen name="menu_button_head_text_margin">8dp</dimen>
 </resources>

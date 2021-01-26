@@ -10,6 +10,18 @@
     android:padding="10dp">
 
 
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postinfoBox" />
+
     <TextView
         android:id="@+id/sumBox"
         android:layout_width="0dp"
@@ -25,6 +37,8 @@
         android:id="@+id/sumLabelBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
         android:text="@string/sum"
@@ -35,6 +49,8 @@
         android:id="@+id/kidBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
         android:text="TextView"
@@ -45,6 +61,8 @@
         android:id="@+id/stateresultBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:fontFamily="@font/roboto"
         android:gravity="right"
         android:padding="6dp"
@@ -58,7 +76,8 @@
         android:id="@+id/statenameBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:fontFamily="@font/roboto"
         android:padding="6dp"
         android:text="TextView"
@@ -66,7 +85,18 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postinfoBox" />
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/avatarTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/CircleText"
+        android:text="AB"
+        app:layout_constraintBottom_toBottomOf="@+id/avatarBox"
+        app:layout_constraintEnd_toEndOf="@+id/avatarBox"
+        app:layout_constraintStart_toStartOf="@+id/avatarBox"
+        app:layout_constraintTop_toTopOf="@+id/avatarBox" />
 
     <ImageView
         android:id="@+id/avatarBox"
@@ -76,6 +106,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/woman"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,6 +145,6 @@
         android:text="@string/open"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kidBox" />
+        app:layout_constraintTop_toBottomOf="@+id/sumBox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
